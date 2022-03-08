@@ -5,6 +5,7 @@ import com.microservices.enduserservice.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,4 +27,6 @@ public class HomeController {
                 .body(String.format("Sent the Student to the Data Aggregation Service %s \nAnd got back:\n %s",
                         student.toString(), gradesResult.toString()));
     }
+
+
 }
